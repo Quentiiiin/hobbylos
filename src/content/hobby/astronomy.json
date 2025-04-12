@@ -1,0 +1,20 @@
+{
+    "name": "Astronomy",
+    "slug": "astronomy",
+    "tags": [
+        "science",
+        "outdoors",
+        "learning"
+    ],
+    "description": "Studying celestial objects and phenomena. Explore the universe through observation and learning.",
+    "resources": [
+        {
+            "name": "Sky & Telescope",
+            "url": "https://skyandtelescope.org/"
+        },
+        {
+            "name": "NASA",
+            "url": "https://www.nasa.gov/"
+        }
+    ]
+}
