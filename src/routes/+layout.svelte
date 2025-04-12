@@ -9,7 +9,7 @@ import GridBackground from "$lib/components/GridBackground.svelte";
 
 <GridBackground />
 <Navbar />
-<main class=" w-screen flex justify-center">
+<main class=" w-screen flex justify-center min-h-screen">
     {@render children()}
 </main>
 <Footer />

@@ -2,9 +2,7 @@
     "name": "Astronomy",
     "slug": "astronomy",
     "tags": [
-        "science",
-        "outdoors",
-        "learning"
+        {"tag":"science", "overlap": 0.5}
     ],
     "description": "Studying celestial objects and phenomena. Explore the universe through observation and learning.",
     "resources": [

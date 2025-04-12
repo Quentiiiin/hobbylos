@@ -10,8 +10,8 @@
             </a>
             [
             {#each hobby.tags as t}
-                <a class=" px-1 hover:underline" href="/tags/{t}">
-                    {t}
+                <a class=" px-1 hover:underline" href="/tags/{t.tag}">
+                    {t.tag}
                 </a>
             {/each}
             ]

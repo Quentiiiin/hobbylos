@@ -1,14 +1,9 @@
 <script lang="ts">
+    import HobbyCard from "$lib/components/HobbyCard.svelte";
+
     const {data} = $props();
 </script>
 
 {#if data.hobby}
-<div>
-    <h1>
-        {data.hobby.name}
-    </h1>
-    <p>
-        {data.hobby.tags}
-    </p>
-</div>
+<HobbyCard hobby={data.hobby} />
 {/if}
