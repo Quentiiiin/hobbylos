@@ -1,5 +1,6 @@
 <script lang="ts">
-    import GridBackground from "$lib/components/GridBackground.svelte";
+    import Footer from "$lib/components/Footer.svelte";
+import GridBackground from "$lib/components/GridBackground.svelte";
     import Navbar from "$lib/components/Navbar.svelte";
     import "../app.css";
 
@@ -11,3 +12,4 @@
 <main class=" w-screen flex justify-center">
     {@render children()}
 </main>
+<Footer />

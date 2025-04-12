@@ -1,14 +1,15 @@
 <script lang="ts">
+    import ResultCard from '$lib/components/ResultCard.svelte';
+
     const { data } = $props();
 </script>
 
 <div>
     <ol>
-        {#each data.results as result}
+        {#each data.results as result, i}
         {#if result.matchRate > 0}
             <li>
-                {result.hobby.name}
-                {result.matchRate}%
+                <ResultCard result={result} extended={i > -1} />
             </li>
             {/if}
         {/each}

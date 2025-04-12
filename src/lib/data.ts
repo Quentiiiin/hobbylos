@@ -46,11 +46,5 @@ export function match(inputTags: string[]): Result[] {
             matchRate: Math.round(percent)
         });
     }
-
-    results.sort((a, b) => {
-        // Sort in descending order of percentage.
-        return b.percent - a.percent;
-    });
-
     return results;
 }
