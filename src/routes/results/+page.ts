@@ -1,12 +1,13 @@
-import { hobbies } from '$lib/data';
+import { hobbies, match } from '$lib/data';
 import type { Result } from '$lib/types';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageLoad = ({ params, url }) => {
 
-    const res: Result[] = [
-        { hobby: hobbies[0], matchRate: 100 },
-    ];
+    const tags: string[] = Array.from(url.searchParams.keys());
+
+
+    const res: Result[] = match(tags);
 
     const sortedRes = res.toSorted((a, b) => b.matchRate - a.matchRate); //sort by matchrate
 

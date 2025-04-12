@@ -33,6 +33,24 @@ export function getAllTags() {
     return tags;
 }
 
-export function match(tags: string[]): Result[] {
-    return [];
+export function match(inputTags: string[]): Result[] {
+    const results: Result[] = [];
+
+    for (const hobby of hobbies) {
+        const overlap = hobby.tags.filter(tag => inputTags.includes(tag)).length;
+        const totalTags = hobby.tags.length;
+        const percent = totalTags === 0 ? 0 : (overlap / totalTags) * 100;
+
+        results.push({
+            hobby: hobby,
+            matchRate: Math.round(percent)
+        });
+    }
+
+    results.sort((a, b) => {
+        // Sort in descending order of percentage.
+        return b.percent - a.percent;
+    });
+
+    return results;
 }
