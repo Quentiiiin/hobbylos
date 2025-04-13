@@ -2,6 +2,8 @@ import { match } from '$lib/matchmaking';
 import type { Result } from '$lib/types';
 import type { PageLoad } from './$types';
 
+export const prerender = false;
+
 export const load: PageLoad = ({ params, url }) => {
 
     const tags: string[] = Array.from(url.searchParams.keys());

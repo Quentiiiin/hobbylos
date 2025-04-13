@@ -1,5 +1,5 @@
-import { findHobbiesByTag } from '$lib/data';
-import type { PageLoad } from './$types';
+import { findHobbiesByTag, getAllTags, hobbies } from '$lib/data';
+import type { EntryGenerator, PageLoad } from './$types';
 
 export const load: PageLoad = ({ params }) => {
 
@@ -9,4 +9,12 @@ export const load: PageLoad = ({ params }) => {
         hobbies,
         tagName: params.slug
     };
+};
+
+export const entries: EntryGenerator = () => {
+    const pages: { slug: string }[] = [];
+    getAllTags().forEach(t => {
+        pages.push({slug: t});
+    });
+    return pages;
 };
