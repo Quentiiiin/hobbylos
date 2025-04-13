@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Result } from "$lib/types";
+    import Tag from "./Tag.svelte";
 
     const { result, extended }: { result: Result; extended: boolean } =
         $props();
@@ -41,17 +42,7 @@
         <ul class="flex flex-wrap gap-2 mb-4">
             {#each visibleTags as tag (tag.tag)}
               <li class="group relative">
-                <a
-                  href={`/tags/${tag.tag}`}
-                  class="block bg-blue-300 rounded-md text-black border-2 border-black shadow-[2px_2px_0px_black] px-3 py-1 uppercase text-sm font-bold hover:bg-blue-400 transition-colors duration-200 whitespace-nowrap"
-                >
-                  {tag.tag}
-                </a>
-                <span
-                  class="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-0.5 group-hover:opacity-100 opacity-0 invisible group-hover:visible transition-opacity duration-200 text-xs font-semibold bg-gray-100 border border-black shadow-[1px_1px_0px_black] rounded-sm whitespace-nowrap"
-                >
-                  Overlap: {(tag.overlap * 100).toFixed(0)}%
-                </span>
+                <Tag name={tag.tag} overlap={tag.overlap} />
               </li>
             {/each}
           </ul>

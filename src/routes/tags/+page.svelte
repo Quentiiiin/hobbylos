@@ -1,15 +1,14 @@
 <script lang="ts">
-    import { findHobbiesByTag, getAllTags } from "$lib/data";
+    import Tag from "$lib/components/Tag.svelte";
+    import {  getAllTags } from "$lib/data";
 
 
 </script>
 
-<ul>
+<ul class=" flex flex-wrap p-20 w-1/2">
     {#each getAllTags() as tag}
-        <li>
-            <a class=" hover:underline" href="/tags/{tag}">
-                {tag} {findHobbiesByTag(tag).length}
-            </a>
+        <li class=" p-1">
+            <Tag name={tag} />
         </li>
     {/each}
 </ul>
