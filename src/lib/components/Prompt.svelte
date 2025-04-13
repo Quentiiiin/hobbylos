@@ -27,7 +27,7 @@
             onclick={() => changeAnswer(undefined)}
             class=" cursor-pointer mt-4 p-4 border-2 w-full border-black rounded-md shadow-[2px_2px_0px_0px_rgba(0,0,0)] bg-white"
         >
-            {prompt.question.answers[prompt.chosenAnswer]}
+            {prompt.question.answers[prompt.chosenAnswer].text}
         </button>
     {:else}
         <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">

@@ -8,18 +8,6 @@
             <a class=" hover:underline" href="/hobby/{hobby.slug}">
                 {i}  {hobby.name}
             </a>
-            [
-            {#each hobby.tags as t}
-                <a class=" px-1 hover:underline" href="/tags/{t.tag}">
-                    {t.tag}
-                </a>
-            {/each}
-            ]
-            {#each hobby.resources as r}
-                <a href={r.url} rel="nofollow">
-                    {r.name}
-                </a>
-            {/each}
         </li>
     {/each}
 </ul>
