@@ -6,5 +6,5 @@
 
 * {
     font-family: 'Lexend', sans-serif;
-    @apply selection:bg-blue-300 selection:text-lime-400
+    @apply selection:bg-blue-400 selection:text-white
 }
