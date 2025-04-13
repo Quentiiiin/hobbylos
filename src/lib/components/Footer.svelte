@@ -1,3 +1,8 @@
+<script>
+
+    import { SITE_FRIENDLY_NAME } from "$lib/constants";
+
+</script>
 <footer class=" w-full flex justify-center pb-4">
     <ul>
         <li>
@@ -7,7 +12,7 @@
         </li>
         <li>
             <span>
-                © hobbylos 2025
+                © {SITE_FRIENDLY_NAME} {new Date().getFullYear()}
             </span>
         </li>
     </ul>

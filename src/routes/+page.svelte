@@ -1,5 +1,6 @@
 <script lang="ts">
     import Prompt from "$lib/components/Prompt.svelte";
+    import { SITE_FRIENDLY_NAME } from "$lib/constants";
     import { questions } from "$lib/data";
     import type { QuestionPrompt } from "$lib/types";
     const prompts: QuestionPrompt[] = $state([]);
@@ -39,6 +40,12 @@
 
     let currentPrompt = $state(0);
 </script>
+
+<svelte:head>
+    <title>
+        ~ | {SITE_FRIENDLY_NAME}
+    </title>
+</svelte:head>
 
 <div class="  h-screen flex items-center justify-center">
     <ul class="">

@@ -6,6 +6,7 @@ export const load: PageLoad = ({ params }) => {
    const hobbies = findHobbiesByTag(params.slug);
 
     return {
-        hobbies
+        hobbies,
+        tagName: params.slug
     };
 };

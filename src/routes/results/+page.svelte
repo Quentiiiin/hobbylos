@@ -1,8 +1,15 @@
 <script lang="ts">
     import ResultCard from '$lib/components/ResultCard.svelte';
+    import { SITE_FRIENDLY_NAME } from '$lib/constants.js';
 
     const { data } = $props();
 </script>
+
+<svelte:head>
+    <title>
+        hobbyfinder results | {SITE_FRIENDLY_NAME}
+    </title>
+</svelte:head>
 
 <div>
     <ol class=" max-w-2xl">

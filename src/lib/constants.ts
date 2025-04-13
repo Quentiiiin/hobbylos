@@ -1,0 +1,1 @@
+export const SITE_FRIENDLY_NAME = 'hobbylos';
