@@ -6,7 +6,6 @@ const config = {
 	kit: { adapter: adapter({
 		routes: {
 			exclude: ['/*'],
-			include: ['/results*']
 		}
 	}) },
 	extensions: ['.svelte']

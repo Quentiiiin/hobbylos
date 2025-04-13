@@ -11,6 +11,7 @@
     </title>
 </svelte:head>
 
+{#if data.results}
 <div>
     <ol class=" max-w-2xl">
         {#each data.results as result, i}
@@ -22,3 +23,5 @@
         {/each}
     </ol>
 </div>
+{/if}
+

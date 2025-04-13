@@ -2,5 +2,7 @@
     "name": "hobbylos",
     "compatibility_date": "2025-04-13",
     "main": ".svelte-kit/output/server/index.js",
-    "nodejs_compat": "true"
+      "compatibility_flags": [
+        "nodejs_compat"
+      ]
   }
