@@ -2,12 +2,18 @@
     import Tag from "$lib/components/Tag.svelte";
     import { SITE_FRIENDLY_NAME } from "$lib/constants";
     import { getAllTags } from "$lib/data";
+
+    
 </script>
 
 <svelte:head>
     <title>
         all tags | {SITE_FRIENDLY_NAME}
     </title>
+    <meta name="keywords" content="hobby" />
+    <meta name="description" content="all tags" />
+    <meta property="og:title" content="all tags" />
+    <meta property="og:description" content="all tags"/>
 </svelte:head>
 
 <h2 class=" text-4xl font-bold absolute p-4 pt-14">all tags</h2>

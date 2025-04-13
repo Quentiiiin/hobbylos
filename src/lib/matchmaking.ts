@@ -34,5 +34,7 @@ export function match(inputTags: Record<string, number>): Result[] {
 
     results.sort((a, b) => b.matchRate - a.matchRate);
 
+    if(results.length > 10) results.length = 10;
+
     return results;
 }

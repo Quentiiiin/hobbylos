@@ -44,8 +44,13 @@
 
 <svelte:head>
     <title>
-        ~ | {SITE_FRIENDLY_NAME}
+        {SITE_FRIENDLY_NAME} | A Hobby Finding App
     </title>
+    <meta name="keywords" content="hobby, hobby finder" />
+    <meta name="description" content="an interactive hobby finding app" />
+    <meta property="og:title" content="{SITE_FRIENDLY_NAME}" />
+    <meta property="og:description" content="an interactive hobby finding app"/>
+    
 </svelte:head>
 
 <div class="  h-screen flex items-center justify-center">

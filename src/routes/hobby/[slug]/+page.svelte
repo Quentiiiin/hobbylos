@@ -17,6 +17,8 @@
     </title>
     <meta name="keywords" content={keywords}>
     <meta name="description" content={data.hobby?.description}>
+    <meta property="og:title" content={data.hobby?.name}>
+    <meta property="og:description" content={data.hobby?.description}>
 </svelte:head>
 
 {#if data.hobby}
