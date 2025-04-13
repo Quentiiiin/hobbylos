@@ -5,7 +5,7 @@ const config = {
 	preprocess: [vitePreprocess({})],
 	kit: { adapter: adapter({
 		routes: {
-			exclude: "/*",
+			exclude: ["/*"],
 		}
 	}) },
 	extensions: ['.svelte']
