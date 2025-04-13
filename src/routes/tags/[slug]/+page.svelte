@@ -11,9 +11,6 @@
     </title>
 </svelte:head>
 
-<h2 class=" text-4xl font-bold absolute p-4">
-    all <span class=" text-amber-500">{data.tagName}</span> hobbies
-</h2>
 {#if data.hobbies}
-    <HobbyList hobbies={data.hobbies} />
+    <HobbyList hobbies={data.hobbies} title="all {data.tagName} hobbies" />
 {/if}

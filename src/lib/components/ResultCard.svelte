@@ -17,13 +17,13 @@
 </script>
 
 <div
-    class="bg-fuchsia-300 m-2 p-4 rounded-md shadow-[4px_4px_0px_black] border-2 border-black w-full"
+    class="bg-fuchsia-300 m-4 p-4 md:p-10 rounded-md shadow-[4px_4px_0px_black] border-2 border-black w-[90vw] md:w-auto"
 >
     <div class="flex justify-between items-center mb-2">
         <a href="/hobby/{result.hobby.slug}">
             <h3
                 class={`font-bold hover:underline uppercase tracking-wider ${
-                    extended ? "text-4xl leading-none" : "text-xl"
+                    extended ? "md:text-4xl text-xl leading-none" : "text-xl"
                 }`}
             >
                 {result.hobby.name}
@@ -41,7 +41,7 @@
         </p>
         <ul class="flex flex-wrap gap-2 mb-4">
             {#each visibleTags as tag (tag.tag)}
-              <li class="group relative">
+              <li class="group">
                 <Tag name={tag.tag} overlap={tag.overlap} />
               </li>
             {/each}

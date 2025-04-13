@@ -10,5 +10,4 @@
     </title>
 </svelte:head>
 
-<h2 class=" text-4xl font-bold absolute p-4">all hobbies</h2>
-<HobbyList {hobbies} />
+<HobbyList {hobbies} title="all hobbies" />

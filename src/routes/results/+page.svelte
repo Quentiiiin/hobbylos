@@ -14,7 +14,7 @@
 {#if data.results}
 <div>
     {#if data.results.some(r => r.matchRate > 0)}
-    <ol class=" max-w-2xl">
+    <ol class=" max-w-2xl pt-14">
         {#each data.results as result, i}
         {#if result.matchRate > 0}
             <li>
@@ -24,7 +24,7 @@
         {/each}
     </ol>
     {:else}
-    <div class=" flex-col flex justify-center items-center bg-yellow-200 p-6 border-2 border-black shadow-[4px_4px_0px_black] m-10 rounded-md max-w-2xl mx-auto">
+    <div class=" flex-col flex justify-center items-center bg-yellow-200 p-6 border-2 border-black shadow-[4px_4px_0px_black] m-10 rounded-md max-w-2xl mt-20">
         <h2 class=" text-3xl font-medium">
             No results for your selected questions
         </h2>

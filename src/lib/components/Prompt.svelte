@@ -17,7 +17,7 @@
 </script>
 
 <div
-    class="{randomColor()} border-2 border-black p-6 rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0)]"
+    class="{randomColor()} border-2 border-black p-6 rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0)] m-2"
 >
     <p class="text-xl font-bold mb-4">
         {prompt.question.text}

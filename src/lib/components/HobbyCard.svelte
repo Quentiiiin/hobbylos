@@ -21,14 +21,14 @@
 
 </script>
 
-<div class="bg-yellow-200 p-6 border-2 border-black shadow-[4px_4px_0px_black] m-10 rounded-md max-w-2xl mx-auto">
+<div class="bg-yellow-200 p-6 border-2 border-black shadow-[4px_4px_0px_black] m-10 rounded-md max-w-2xl mx-2">
   <h2 class="text-4xl font-bold mb-4 leading-tight tracking-wider">
     {hobby.name}
   </h2>
 
   <ul class="flex flex-wrap gap-2 mb-4">
     {#each visibleTags as tag (tag.tag)}
-      <li class="group relative">
+      <li class="group">
         <Tag name={tag.tag} overlap={tag.overlap} />
       </li>
     {/each}
