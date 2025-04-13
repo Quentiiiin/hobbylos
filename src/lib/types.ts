@@ -11,7 +11,7 @@ export type Result = {
 }
 
 export const QuestionSchema = z.object({
-    text: z.string().min(2).max(50).describe('the question that is given to the user'),
+    text: z.string().min(2).max(100).describe('the question that is given to the user'),
     answers: z.array(
         z.object({
             text: z.string().min(2).max(50).describe('the question answer that the user sees'),
