@@ -57,7 +57,7 @@
           class="text-blue-700 hover:text-blue-900 underline font-medium"
           href={resource.url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener nofollow"
         >
           {resource.name}
         </a>
