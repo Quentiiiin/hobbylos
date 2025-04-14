@@ -2,9 +2,10 @@ import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { execSync } from 'child_process';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()]
+	plugins: [enhancedImages(),tailwindcss(), sveltekit()]
 });
 
 const commitDate = execSync('git log -1 --format=%cI').toString().trimEnd();

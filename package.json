@@ -26,6 +26,7 @@
 		"@fontsource-variable/lexend": "^5.2.6",
 		"@sveltejs/adapter-cloudflare": "^7.0.1",
 		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/enhanced-img": "^0.4.4",
 		"@types/bun": "^1.2.9",
 		"zod": "^4.0.0-beta.20250412T085909"
 	}

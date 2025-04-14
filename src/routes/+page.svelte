@@ -64,6 +64,7 @@
     />
 </svelte:head>
 
+<!-- <enhanced:img class=" absolute h-50 w-auto" src="$lib/assets/text.png" alt="Find your new Hobby here ➞" /> -->
 <div class="  h-screen flex items-center justify-center">
     <ul class="">
         <div class=" flex">

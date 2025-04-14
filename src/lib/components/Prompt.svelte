@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { QuestionPrompt } from "$lib/types";
+    import { selectRandomWithSeed } from "$lib/util/random";
 
     const {
         prompt,
@@ -12,7 +13,7 @@
     const colors = ["bg-amber-200", "bg-rose-200", "bg-lime-200", "bg-sky-200"];
 
     function randomColor() {
-        return colors[Math.floor(Math.random() * colors.length)];
+        return selectRandomWithSeed(colors, prompt.question.text);
     }
 </script>
 
