@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import { match } from '$lib/matchmaking';
+import { match } from '$lib/matchmaking/matchmaking';
 import type { Result } from '$lib/types';
 import type { PageLoad } from './$types';
 

@@ -1,26 +1,31 @@
 <script lang="ts">
     import HobbyCard from "$lib/components/HobbyCard.svelte";
+    import RelatedHobbiesBox from "$lib/components/RelatedHobbiesBox.svelte";
     import { SITE_FRIENDLY_NAME } from "$lib/constants.js";
 
-    const {data} = $props();
+    const { data } = $props();
 
     let keywords = $state("");
-    data.hobby?.tags.forEach(t => {
+    data.hobby?.tags.forEach((t) => {
         keywords = keywords + ", " + t.tag;
     });
-
 </script>
 
 <svelte:head>
     <title>
         {data.hobby?.name} | {SITE_FRIENDLY_NAME}
     </title>
-    <meta name="keywords" content={keywords}>
-    <meta name="description" content={data.hobby?.description}>
-    <meta property="og:title" content={data.hobby?.name}>
-    <meta property="og:description" content={data.hobby?.description}>
+    <meta name="keywords" content={keywords} />
+    <meta name="description" content={data.hobby?.description} />
+    <meta property="og:title" content={data.hobby?.name} />
+    <meta property="og:description" content={data.hobby?.description} />
 </svelte:head>
 
-{#if data.hobby}
-<HobbyCard hobby={data.hobby} />
+<div class=" flex flex-col">
+    {#if data.hobby}
+    <HobbyCard hobby={data.hobby} />
+    {#if data.relatedHobbies}
+    <RelatedHobbiesBox hobbies={data.relatedHobbies} />
+    {/if}
 {/if}
+</div>

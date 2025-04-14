@@ -1,6 +1,6 @@
-import { ALREADY_KNOWN_TAG_PENALTY, POTENTIAL_HOBBY_TAG_REWARD } from "./constants";
-import { hobbies, questions } from "./data";
-import type { Hobby, Question, QuestionPrompt, Result } from "./types";
+import { ALREADY_KNOWN_TAG_PENALTY, POTENTIAL_HOBBY_TAG_REWARD } from "../constants";
+import { hobbies, questions } from "../data";
+import type { Hobby, Question, QuestionPrompt, Result } from "../types";
 
 export function match(inputTags: Record<string, number>): Result[] {
     const results: Result[] = [];

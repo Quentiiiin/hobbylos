@@ -21,7 +21,7 @@
 
 </script>
 
-<div class="bg-yellow-200 p-6 border-2 border-black shadow-[4px_4px_0px_black] m-10 rounded-md max-w-2xl mx-2">
+<div class="bg-yellow-200 p-6 border-2 border-black shadow-[4px_4px_0px_black] m-10 rounded-md max-w-2xl mx-2 h-min">
   <h2 class="text-4xl font-bold mb-4 leading-tight tracking-wider">
     {hobby.name}
   </h2>

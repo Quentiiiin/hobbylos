@@ -2,7 +2,7 @@
     import { goto } from "$app/navigation";
     import Prompt from "$lib/components/Prompt.svelte";
     import { MAX_QUESTIONS, SITE_FRIENDLY_NAME } from "$lib/constants";
-    import { getNextQuestion, match } from "$lib/matchmaking";
+    import { getNextQuestion, match } from "$lib/matchmaking/matchmaking";
     import type { QuestionPrompt } from "$lib/types";
     const prompts: QuestionPrompt[] = $state([]);
 
