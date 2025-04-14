@@ -53,24 +53,27 @@
 
 <svelte:head>
     <title>
-        {SITE_FRIENDLY_NAME} | A Hobby Finding App
+        {SITE_FRIENDLY_NAME} | find your next passion
     </title>
     <meta name="keywords" content="hobby, hobby finder" />
-    <meta name="description" content="an interactive hobby finding app" />
+    <meta name="description" content="find your next passion" />
     <meta property="og:title" content={SITE_FRIENDLY_NAME} />
     <meta
         property="og:description"
-        content="an interactive hobby finding app"
+        content="find your next passion"
     />
 </svelte:head>
 
-<!-- <enhanced:img class=" absolute h-50 w-auto" src="$lib/assets/text.png" alt="Find your new Hobby here ➞" /> -->
+<!-- <enhanced:img class=" absolute h-50 w-auto" src="$divb/assets/text.png" alt="Find your new Hobby here ➞" /> -->
 <div class="  h-screen flex items-center justify-center">
-    <ul class="">
+    <div class="">
+        <h2 class=" font-black text-center text-4xl pb-20 italic uppercase text-shadow-lg">
+            find your next passion
+        </h2>
         <div class=" flex">
             {#each prompts as prompt}
                 {#if prompts[currentPrompt] === prompt}
-                    <li class="py-4">
+                    <div class="py-4">
                         <Prompt
                             {prompt}
                             changeAnswer={(index) => {
@@ -86,12 +89,12 @@
                                 }
                             }}
                         />
-                    </li>
+                        </div>
                 {/if}
             {/each}
         </div>
 
-        <li class=" flex w-full justify-center items-center">
+        <div class=" flex w-full justify-center items-center">
             {#if currentPrompt > 0}
                 <button
                     class="mt-6 mx-2 bg-gray-300 border-2 border-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0)] px-4 py-2 cursor-pointer hover:bg-gray-400 active:shadow-[1px_1px_0px_0px_rgba(0,0,0)] active:translate-x-[3px] active:translate-y-[3px]"
@@ -108,8 +111,8 @@
                     Skip
                 </button>
             {/if}
-        </li>
-        <li class=" flex items-center justify-center">
+        </div>
+        <div class=" flex items-center justify-center">
             {#if currentPrompt + 1 === questionAmount}
                 <a
                     href={"results?" + resultParams}
@@ -118,6 +121,6 @@
                     RESULT
                 </a>
             {/if}
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>

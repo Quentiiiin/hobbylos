@@ -21,5 +21,8 @@
         <li>
             Version: {data.branch}-{data.HASH.slice(0,7)}
         </li>
+        <li>
+            {data.count} Commits
+        </li>
     </ul>
 </div>

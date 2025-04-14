@@ -11,7 +11,9 @@ export default defineConfig({
 const commitDate = execSync('git log -1 --format=%cI').toString().trimEnd();
 const branchName = execSync('git rev-parse --abbrev-ref HEAD').toString().trimEnd();
 const commitHash = execSync('git rev-parse HEAD').toString().trimEnd();
+const commitCount = execSync('git rev-list --count HEAD').toString().trimEnd();
 
 process.env.VITE_GIT_COMMIT_DATE = commitDate;
 process.env.VITE_GIT_BRANCH_NAME = branchName;
 process.env.VITE_GIT_COMMIT_HASH = commitHash;
+process.env.VITE_GIT_COMMIT_COUNT = commitCount;
