@@ -54,6 +54,7 @@
       {#if imageSrc}
         <div class="w-full md:w-[512px] flex justify-center">
           <enhanced:img
+            fetchpriority="high"
             src={imageSrc}
             alt={`${hobby.name} picture`}
             class="rounded-md w-full object-contain"
@@ -72,6 +73,7 @@
         {/each}
       </div>
   
+      <!--
       {#if hobby.tags.length > initialTagCount}
         <button
           onclick={toggleShowTags}
@@ -82,6 +84,7 @@
             : `Show All ${hobby.tags.length} Tags`}
         </button>
       {/if}
+      -->
     </div>
   
     <div class="mt-6">
