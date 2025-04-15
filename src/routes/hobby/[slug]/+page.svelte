@@ -44,7 +44,9 @@
 
 <div class=" flex flex-col">
     {#if data.hobby}
-        <HobbyCard hobby={data.hobby} />
+        {#key data.hobby}
+            <HobbyCard hobby={data.hobby} />
+        {/key}
         {#if data.relatedHobbies}
             <RelatedHobbiesBox hobbies={data.relatedHobbies} />
         {/if}
