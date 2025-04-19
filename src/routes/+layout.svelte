@@ -2,9 +2,10 @@
     import Footer from "$lib/components/Footer.svelte";
     import GridBackground from "$lib/components/GridBackground.svelte";
     import Navbar from "$lib/components/Navbar.svelte";
-    import { SITE_FRIENDLY_NAME } from "$lib/constants";
+    import { BASE_URL, SITE_FRIENDLY_NAME } from "$lib/constants";
     import '@fontsource-variable/lexend';
     import "../app.css";
+    import { page } from '$app/state';
 
     let { children } = $props();
 </script>
@@ -13,6 +14,7 @@
     <title>
         {SITE_FRIENDLY_NAME}
     </title>
+    <link rel="canonical" href="{BASE_URL}{page.url.pathname}">
 </svelte:head>
 
 <GridBackground />
