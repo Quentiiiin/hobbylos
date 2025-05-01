@@ -2,24 +2,9 @@
     import type { Hobby } from "$lib/types";
     import Tag from "./Tag.svelte";
   
-    const { hobby }: { hobby: Hobby } = $props();
+    const { hobby, imageSrc }: { hobby: Hobby, imageSrc: any } = $props();
   
-    const imageModules: Record<string, any> = import.meta.glob(
-      "$lib/assets/images/*.png",
-      {
-        eager: true,
-        query: {
-          enhanced: true,
-        },
-      },
-    );
-  
-    let imageSrc: any = $state();
-    Object.entries(imageModules).forEach((i) => {
-      if (i[0].replaceAll(".png", "").endsWith(hobby.slug)) {
-        imageSrc = i[1].default;
-      }
-    });
+
   
     let showAllTags = $state(false);
     const initialTagCount = 5;

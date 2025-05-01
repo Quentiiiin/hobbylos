@@ -29,6 +29,24 @@
             url: r.url,
         });
     });
+
+    const imageModules: Record<string, any> = import.meta.glob(
+      "$lib/assets/images/*.png",
+      {
+        eager: true,
+        query: {
+          enhanced: true,
+        },
+      },
+    );
+  
+    let imageSrc: any = $state();
+    Object.entries(imageModules).forEach((i) => {
+      if (data.hobby && i[0].replaceAll(".png", "").endsWith(data.hobby.slug)) {
+        imageSrc = i[1].default;
+      }
+    });
+
 </script>
 
 <svelte:head>
@@ -45,7 +63,7 @@
 <div class=" flex flex-col">
     {#if data.hobby}
         {#key data.hobby}
-            <HobbyCard hobby={data.hobby} />
+            <HobbyCard hobby={data.hobby} imageSrc={imageSrc} />
         {/key}
         {#if data.relatedHobbies}
             <RelatedHobbiesBox hobbies={data.relatedHobbies} />
