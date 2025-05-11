@@ -6,7 +6,7 @@ export async function GET(): Promise<Response> {
     'User-agent: *',
     'Allow: /',
     '',
-    `Sitemap: 'https://hobbylos.quentins.space/sitemap.xml`
+    `Sitemap: 'https://hobbylos.quentins.space/sitemap.xml'`
   ].join('\n').trim();
 
   const headers = {

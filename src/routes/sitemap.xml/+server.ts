@@ -1,8 +1,9 @@
 import * as sitemap from 'super-sitemap';
-import type { RequestHandler } from '@sveltejs/kit';
 import { getAllTags, hobbies } from '$lib/data';
 
-export const GET: RequestHandler = async () => {
+export const prerender = true;
+
+export async function GET(): Promise<Response> {
   return await sitemap.response({
     origin: 'https://hobbylos.quentins.space',
     excludeRoutePatterns: [
